@@ -1,0 +1,63 @@
+POST http://localhost:3003/contas/criar
+Content-Type: application/json
+
+//Endpoint para criar uma conta
+
+{
+    "name": "Benjamin",
+    "cpf": "52368876784",
+    "dataNascimento": "14/10/2003"
+}
+
+
+
+###
+
+PUT http://localhost:3003/contas/adicionar/saldo
+ Content-Type: application/json
+
+// Endpoint para adicionar saldo
+
+ {
+    "name": "vinicius",
+    "cpf":"48836585225",
+    "saldo": 3000
+}
+
+
+
+###
+
+POST http://localhost:3003/contas/pagar
+Content-Type: application/json
+
+//Endpoint para pagar conta, a data é opcional, caso
+// não passe a data, o saldo é atualizado automaticamente
+{
+     "cpf":"48836585225",
+     "data": "12/06/2022",
+     "descricao": "conta de luz",
+     "valor": 120
+}
+
+
+###
+
+PUT http://localhost:3003/conta/5d6a231a-e7a8-4925-bb82-116f07d09e3d/saldo/atualizar
+//atualiza conta cuja a data seja presente!
+
+
+
+
+###
+
+Get http://localhost:3003/contas/usuarios
+// pega todos usuário
+
+
+
+###
+
+GET http://localhost:3003/contas/saldo
+ Authorization:48836585225  
+// pega saldo do usuário precisa passar o cpf no Authorization
